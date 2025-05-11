@@ -3,7 +3,7 @@ import pandas as pd
 import gc
 
 guardian = pd.read_csv('C:/Users/Thunder/Desktop/essay/guardian_articles.csv', encoding='ISO-8859-1')
-bbc = pd.read_csv('C:/Users/Thunder/Desktop/essay/bbc.csv', encoding='ISO-8859-1')
+bbc = pd.read_csv('https://raw.githubusercontent.com/Thunder30519/detectionpoliticalbias_westernmedia/refs/heads/main/bbc_news.csv', encoding='ISO-8859-1')
 
 ### to find the content about russia and ukraine ###
 def find_ur(element, sentence):
@@ -36,6 +36,25 @@ for i in guardian_politi.index:
     if find_ur(element,bbc_new.iloc[:,4][i]):
         number_b = np.append(number_b,i)
 
-### output the result ###
+### output the dataset only including date and the description###
+gua_pure = guardian_politi.iloc[:,[4,5]]
+bbc_pure = bbc.iloc[:,[4,1]]
+
+### arrange the dataset ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
